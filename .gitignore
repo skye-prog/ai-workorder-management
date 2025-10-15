@@ -1,36 +1,81 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
-*.pem
 
-# debug
+# Node
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# local env files
-.env*.local
-.env
+# Build outputs
+dist/
+build/
+*.log
 
-# vercel
-.vercel
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+coverage/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Azure
+.azure/
+
+# Deployment
+deployment-info.txt
+deploy.zip
+
+# Jupyter
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
