@@ -18,8 +18,7 @@ router = APIRouter()
 @router.post("/api/auth/login", response_model=LoginResponse)
 async def login(request: LoginRequest):
     """Employee login - Hardcoded for MVP"""
-    if request.username.strip() == "john.doe" and request.password.strip() == "password123":
-        print("Executing query for username:", repr(request.username))
+    if request.username.strip() == "john.doe" and request.password.strip()== "rfs!@tezg187kFz":
         results = db.execute_query(
             "SELECT employee_id, username, full_name, role FROM employees WHERE username = ?",
             (request.username,)
@@ -205,7 +204,7 @@ async def generate_report(filters: ReportFilter):
         query = """
             SELECT au.audit_id, a.asset_name, a.asset_type, a.location,
                    au.inspection_date, au.audit_status, au.urgency_level,
-                   au.ai_summary, e.full_name
+                   au.ai_summary, e.full_name, au.ai_structured_output
             FROM audits au
             JOIN assets a ON au.asset_id = a.asset_id
             JOIN employees e ON au.inspector_id = e.employee_id
